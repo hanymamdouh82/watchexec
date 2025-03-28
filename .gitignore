@@ -1,0 +1,46 @@
+# Binaries
+*.exe
+*.out
+*.o
+*.so
+*.a
+*.dll
+
+# Build directories
+bin/
+dist/
+build/
+
+# Go-related files
+go.sum
+go.work
+go.work.sum
+
+# Vendor directory (if using `go mod vendor`)
+vendor/
+
+# Temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.old
+
+# IDE and editor-specific files
+.vscode/
+.idea/
+*.iml
+*.sublime-workspace
+*.sublime-project
+*.DS_Store
+
+# Debugging and profiling
+*.test
+*.prof
+*.cov
+
+# Configs & local overrides (optional)
+config.yaml
+.env
+
