@@ -1,0 +1,13 @@
+[Unit]
+Description=WatchExec Service
+After=network.target
+
+[Service]
+ExecStart=/home/hany/dotfiles/.bin/watchexec -c /home/hany/dotfiles/.bin/watchexec.conf.yml -v
+Restart=always
+RestartSec=5
+User=hany
+Group=hany
+
+[Install]
+WantedBy=multi-user.target

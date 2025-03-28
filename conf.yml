@@ -1,6 +1,6 @@
 dirs:
   /mnt/repos/drafts: 
-    bin: syncgit
+    bin: /home/hany/dotfiles/.bin/syncgit
     args:
       - bdr
     stdout: true
