@@ -68,7 +68,7 @@ dirs:
 
 | Flag | Description                    | Default      |
 | ---- | ------------------------------ | ------------ |
-| `-c` | Path to the configuration file | `config.yml` |
+| `-c` | Path to the configuration file | `conf.yml` |
 | `-v` | Verbose; logs all operations   |              |
 
 ## Contributing
