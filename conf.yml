@@ -1,0 +1,9 @@
+dirs:
+  /mnt/repos/drafts: 
+    bin: syncgit
+    args:
+      - bdr
+    stdout: true
+    delay: 5
+    exclude:
+      - .git
