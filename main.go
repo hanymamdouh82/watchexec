@@ -75,6 +75,7 @@ func validateConfig() {
 }
 
 func main() {
+	fmt.Println("Watchexec started")
 	var err error
 	watcher, err = fsnotify.NewWatcher()
 	if err != nil {

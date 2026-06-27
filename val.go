@@ -73,7 +73,8 @@ func shouldTrigger(event fsnotify.Event) bool {
 		// Store the creation timestamp
 		fileTimestamps[event.Name] = time.Now()
 		go watched.CheckForNewDirs(event.Name) // Check if it's a new directory to watch
-		return false                           // Don't trigger immediately
+		// return false                            // Don't trigger immediately
+		return true // Trigger immediately, expiremntal
 
 	case fsnotify.Remove:
 		// Check if the file existed briefly
@@ -89,6 +90,11 @@ func shouldTrigger(event fsnotify.Event) bool {
 			return false
 		}
 		return true // Allow normal writes
+
+	case fsnotify.Rename:
+		// Clean up tracking state if the temp file is renamed/moved away
+		delete(fileTimestamps, event.Name)
+		return true // Explicitly trigger on target replacement
 
 	default:
 		return true // Trigger for other cases
